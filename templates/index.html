@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="city">Your City Name</label>
+        <input type="text" name="city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
